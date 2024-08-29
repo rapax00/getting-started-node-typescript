@@ -1,9 +1,20 @@
 # Guia simple para inciar un proyecto con Node.js y TypeScript
 
+## Características
+
+- [pnpm](https://pnpm.io/) para manejar las dependencias
+- [TypeScript](https://typescriptlang.org/)
+- [ESlint](https://eslint.org/) para errores de sintaxis
+- [Prettier](https://prettier.io/) para formatear el código
+
 ## Indice
 
 - [Instalación](#instalación)
 - [Configuración](#configuración)
+- [Uso](#uso)
+  - [ESlint](#eslint)
+  - [Prettier](#prettier)
+  - [Correr el proyecto](#correr-el-proyecto)
 
 ## Configuración
 
@@ -31,6 +42,8 @@ Copiar lo siguiente y pegarlo en `package.json`.
   "scripts": {
     "start": "tsc && node dist/index.js",
     "lint": "eslint .",
+    "format": "pnpm exec prettier . --write",
+    "format-spec": "prettier --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -40,6 +53,7 @@ Copiar lo siguiente y pegarlo en `package.json`.
     "@eslint/js": "^9.9.1",
     "eslint": "^9.9.1",
     "globals": "^15.9.0",
+    "prettier": "3.3.3",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"
   }
@@ -101,12 +115,81 @@ export default [
 ];
 ```
 
-## Uso
-
-### Eslint
+5. Instalar prettier
 
 ```bash
-pnpm  lint
+pnpm install --save-dev prettier
+```
+
+Crear un archivo de configuración para prettier
+
+```bash
+touch .prettierrc
+```
+
+Copiar lo siguiente y pegarlo en `.prettierrc`.
+
+```json
+{
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always"
+}
+```
+
+Crear un archivo de ignore para prettier
+
+```bash
+touch .prettierignore
+```
+
+Copiar lo siguiente y pegarlo en `.prettierignore`.
+
+> Prettier también seguirá las reglas especificadas en .gitignore si existe en el mismo directorio desde el que se ejecuta.
+
+```txt
+node_modules
+dist
+```
+
+## Uso
+
+### ESLint
+
+```bash
+pnpm lint
+```
+
+### Prettier
+
+Formatear el código
+
+```bash
+pnpm format
+```
+
+Formatear una carpeta o archivo específico
+
+```bash
+pnpm format-spec <ruta>
+```
+
+Formatear todos los archivos de prueba
+
+```bash
+pnpm format-spec <ruta/**/*.test.js>
+```
+
+Chequear si el código está formateado
+
+```bash
+pnpm check
 ```
 
 ### Correr el proyecto

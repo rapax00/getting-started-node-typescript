@@ -2,10 +2,21 @@
 
 > Guide available in [Spanish](README.es.md)
 
+## Features
+
+- [pnpm](https://pnpm.io/) to manage dependencies
+- [TypeScript](https://typescriptlang.org/)
+- [ESlint](https://eslint.org/) for syntax errors
+- [Prettier](https://prettier.io/) to format the code
+
 ## Table of Contents
 
 - [Installation](#installation)
 - [Configuration](#configuration)
+- [Usage](#usage)
+  - [ESlint](#eslint)
+  - [Prettier](#prettier)
+  - [Run the project](#run-the-project)
 
 ## Configuration
 
@@ -33,6 +44,8 @@ Copy the following and paste it into `package.json`.
   "scripts": {
     "start": "tsc && node dist/index.js",
     "lint": "eslint .",
+    "format": "pnpm exec prettier . --write",
+    "format-spec": "prettier --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -42,6 +55,7 @@ Copy the following and paste it into `package.json`.
     "@eslint/js": "^9.9.1",
     "eslint": "^9.9.1",
     "globals": "^15.9.0",
+    "prettier": "3.3.3",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"
   }
@@ -103,12 +117,75 @@ export default [
 ];
 ```
 
+5. Install prettier
+
+```bash
+pnpm install --save-dev prettier
+```
+
+Create a configuration file for prettier
+
+```bash
+touch .prettierrc
+```
+
+Copy the following and paste it into `.prettierrc`.
+
+```json
+{
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always"
+}
+```
+
+Create an ignore file for Prettier
+
+```bash
+touch .prettierignore
+```
+
+Copy the following and paste it into `.prettierignore`.
+
+> Prettier will also follow rules specified in .gitignore if it exists in the same directory from which it is executed.
+
+```txt
+node_modules
+dist
+```
+
 ## Usage
 
-### Eslint
+### ESLint
 
 ```bash
 pnpm lint
+```
+
+### Prettier
+
+Format the code
+
+```bash
+pnpm format
+```
+
+Format the specific folder or file
+
+```bash
+pnpm format-spec <path>
+```
+
+Check if the code is formatted correctly
+
+```bash
+pnpm check
 ```
 
 ### Run the project
