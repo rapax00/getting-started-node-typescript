@@ -1,0 +1,25 @@
+{
+  "name": "init-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/express": "4.17.1",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
