@@ -1,5 +1,7 @@
 # Simple Guide to Start a Project with Node.js and TypeScript
 
+> Guide available in [Spanish](README.es.md)
+
 ## Table of Contents
 
 - [Installation](#installation)
