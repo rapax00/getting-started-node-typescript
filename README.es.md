@@ -151,12 +151,11 @@ touch .prettierignore
 
 Copiar lo siguiente y pegarlo en `.prettierignore`.
 
-> Prettier también seguirá las reglas especificadas en .gitignore si existe en el mismo directorio desde el que se ejecuta.
-
 ```txt
 node_modules
 dist
 ```
+> Prettier también seguirá las reglas especificadas en .gitignore si existe en el mismo directorio desde el que se ejecuta.
 
 ## Uso
 
@@ -195,8 +194,8 @@ pnpm check
 ### Correr el proyecto
 
 > Paso previos:
-> Tener un `src/index.ts`, etc.
-> Instalar las dependencias
+> - Tener un `src/index.ts`, etc.
+> - Instalar las dependencias
 
 ```bash
 pnpm start

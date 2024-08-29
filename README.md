@@ -153,12 +153,12 @@ touch .prettierignore
 
 Copy the following and paste it into `.prettierignore`.
 
-> Prettier will also follow rules specified in .gitignore if it exists in the same directory from which it is executed.
-
 ```txt
 node_modules
 dist
 ```
+
+> Prettier will also follow rules specified in .gitignore if it exists in the same directory from which it is executed.
 
 ## Usage
 
@@ -182,6 +182,12 @@ Format the specific folder or file
 pnpm format-spec <path>
 ```
 
+Format the specific test file
+
+```bash
+pnpm format-spec <ruta/**/*.test.js>
+```
+
 Check if the code is formatted correctly
 
 ```bash
@@ -191,8 +197,8 @@ pnpm check
 ### Run the project
 
 > Prerequisites:
-> Have a `src/index.ts`, etc.
-> Install the dependencies
+> - Have a `src/index.ts`, etc.
+> - Install the dependencies
 
 ```bash
 pnpm start
