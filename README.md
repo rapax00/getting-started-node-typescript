@@ -98,7 +98,7 @@ pnpm install --save-dev eslint
 Initialize eslint
 
 ```bash
-npx eslint --init
+pnpm eslint --init
 ```
 
 Copy the following and paste it into `eslint.config.mjs`.
