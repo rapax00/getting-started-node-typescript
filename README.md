@@ -46,6 +46,7 @@ Copy the following and paste it into `package.json`.
     "lint": "eslint .",
     "format": "pnpm exec prettier . --write",
     "format-spec": "prettier --write",
+    "check": "pnpm exec prettier . --check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
