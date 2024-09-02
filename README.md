@@ -17,17 +17,19 @@
     -   [ESlint](#eslint)
     -   [Prettier](#prettier)
     -   [Run the project](#run-the-project)
+-   [Example](#example)
+-   [To Do](#to-do) (only in this readme)
 
 ## Configuration
 
-1. Create a directory for the project
+### 1. Create a directory for the project
 
 ```bash
 mkdir node_project
 cd node_project
 ```
 
-2. Initialize the project with pnpm
+### 2. Initialize the project with pnpm
 
 ```bash
 pnpm init
@@ -62,7 +64,7 @@ Copy the following and paste it into `package.json`.
 }
 ```
 
-3. Establish the node version
+### 3. Establish the node version
 
 Create a file `.nvmrc`
 
@@ -76,7 +78,7 @@ Copy the following and paste it into `.nvmrc`. ( or use the version you want )
 v20.13
 ```
 
-4. Create a file to ignore the files that are not necessary
+### 4. Create a file to ignore the files that are not necessary
 
 ```bash
 touch .gitignore
@@ -89,7 +91,7 @@ node_modules
 dist
 ```
 
-5. Create a configuration file for TypeScript
+### 5. Create a configuration file for TypeScript
 
 ```bash
 touch tsconfig.json
@@ -116,13 +118,13 @@ Copy the following and paste it into `tsconfig.json`.
 }
 ```
 
-6. Install the dependencies
+### 6. Install the dependencies
 
 ```bash
 pnpm i
 ```
 
-7. Configure ESLint
+### 7. Configure ESLint
 
 Create a configuration file
 
@@ -163,7 +165,7 @@ export default [
 ];
 ```
 
-8. Configure Prettier
+### 8. Configure Prettier
 
 Create a configuration file
 
@@ -238,7 +240,7 @@ Check if the code is formatted correctly
 pnpm check
 ```
 
-### Example
+## Example
 
 > This is a simple example to test the project
 
@@ -268,6 +270,8 @@ console.log('Congratulations, you are ready to start coding! 🎉');
 
 2. Run the project and enjoy it
 
+> See your console
+
 ```bash
 pnpm start
 ```
@@ -276,7 +280,7 @@ pnpm start
 
 ---
 
-## TO DO
+## To Do
 
 -   [ ] Guide for fork the project
 
