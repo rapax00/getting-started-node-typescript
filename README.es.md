@@ -2,19 +2,19 @@
 
 ## Características
 
-- [pnpm](https://pnpm.io/) para manejar las dependencias
-- [TypeScript](https://typescriptlang.org/)
-- [ESlint](https://eslint.org/) para errores de sintaxis
-- [Prettier](https://prettier.io/) para formatear el código
+-   [pnpm](https://pnpm.io/) para manejar las dependencias
+-   [TypeScript](https://typescriptlang.org/)
+-   [ESlint](https://eslint.org/) para errores de sintaxis
+-   [Prettier](https://prettier.io/) para formatear el código
 
 ## Indice
 
-- [Instalación](#instalación)
-- [Configuración](#configuración)
-- [Uso](#uso)
-  - [ESlint](#eslint)
-  - [Prettier](#prettier)
-  - [Correr el proyecto](#correr-el-proyecto)
+-   [Instalación](#instalación)
+-   [Configuración](#configuración)
+-   [Uso](#uso)
+    -   [ESlint](#eslint)
+    -   [Prettier](#prettier)
+    -   [Correr el proyecto](#correr-el-proyecto)
 
 ## Configuración
 
@@ -35,32 +35,59 @@ Copiar lo siguiente y pegarlo en `package.json`.
 
 ```json
 {
-  "name": "node_project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "tsc && node dist/index.js",
-    "lint": "eslint .",
-    "format": "pnpm exec prettier . --write",
-    "format-spec": "prettier --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.9.1",
-    "eslint": "^9.9.1",
-    "globals": "^15.9.0",
-    "prettier": "3.3.3",
-    "typescript": "^5.5.4",
-    "typescript-eslint": "^8.3.0"
-  }
+    "name": "node_project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc && node dist/index.js",
+        "lint": "eslint .",
+        "format": "pnpm exec prettier . --write",
+        "format-spec": "prettier --write",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^9.9.1",
+        "eslint": "^9.9.1",
+        "globals": "^15.9.0",
+        "prettier": "3.3.3",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.3.0"
+    }
 }
 ```
 
-3. Crear un archivo de configuración para TypeScript
+3. Establecer la versión de node
+
+Crear un archivo `.nvmrc`.
+
+```bash
+touch .nvmrc
+```
+
+Copiar lo siguiente y pegarlo en `.nvmrc`. ( o la versión que prefieras )
+
+```txt
+v20.13
+```
+
+4. Crear un archivo para ingrnorar los archivos que no sean necesarios
+
+```bash
+touch .gitignore
+```
+
+Copiar lo siguiente y pegarlo en `.gitignore`.
+
+```txt
+node_modules
+dist
+```
+
+5. Crear un archivo de configuración para TypeScript
 
 ```bash
 touch tsconfig.json
@@ -70,34 +97,53 @@ Copiar lo siguiente y pegarlo en `tsconfig.json`.
 
 ```json
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es6",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "dist",
-    "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true
-  },
-  "lib": ["es2015"],
-  "include": ["**/*"],
-  "exclude": ["node_modules", "dist"]
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es6",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true
+    },
+    "lib": ["es2015"],
+    "include": ["**/*"],
+    "exclude": ["node_modules", "dist"]
 }
 ```
 
-4. Instalar eslint
+6. Instalar las dependencias
 
 ```bash
-pnpm install --save-dev eslint
+pnpm i
 ```
 
-Iniciar eslint
+7. Configurar ESLint
+
+Crear un archivo de configuración
 
 ```bash
 pnpm eslint --init
 ```
+
+Seleccionar las siguientes opciones:
+
+1. How would you like to use ESLint?
+    - To check syntax and find problems
+2. What type of modules does your project use?
+    - JavaScript modules (import/export)
+3. Which framework does your project use?
+    - None of these
+4. Does your project use TypeScript?
+    - Yes
+5. Where does your code run?
+    - Node
+6. Would you like to install them now?
+    - Yes
+7. Which package manager do you want to use?
+    - pnpm
 
 Copiar lo siguiente y pegarlo en `eslint.config.mjs`.
 
@@ -107,21 +153,17 @@ import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts}'] },
-  { ignores: ['node_modules', 'dist'] },
-  { languageOptions: { globals: globals.node } },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+    { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+    { ignores: ['node_modules', 'dist'] },
+    { languageOptions: { globals: globals.node } },
+    pluginJs.configs.recommended,
+    ...tseslint.configs.recommended,
 ];
 ```
 
-5. Instalar prettier
+8. Configurar Prettier
 
-```bash
-pnpm install --save-dev prettier
-```
-
-Crear un archivo de configuración para prettier
+Crear un archivo de configuración
 
 ```bash
 touch .prettierrc
@@ -131,15 +173,15 @@ Copiar lo siguiente y pegarlo en `.prettierrc`.
 
 ```json
 {
-  "printWidth": 80,
-  "tabWidth": 4,
-  "useTabs": false,
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "arrowParens": "always"
+    "printWidth": 80,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "always"
 }
 ```
 
@@ -155,6 +197,7 @@ Copiar lo siguiente y pegarlo en `.prettierignore`.
 node_modules
 dist
 ```
+
 > Prettier también seguirá las reglas especificadas en .gitignore si existe en el mismo directorio desde el que se ejecuta.
 
 ## Uso
@@ -191,17 +234,41 @@ Chequear si el código está formateado
 pnpm check
 ```
 
-### Correr el proyecto
+### Ejemplo
 
-> Paso previos:
-> - Tener un `src/index.ts`, etc.
-> - Instalar las dependencias
+> Este es un ejemplo simple para probar el proyecto
+
+1. Crear directorio
+
+```bash
+mkdir src
+```
+
+Moverse al directorio
+
+```bash
+cd src
+```
+
+Crear un archivo `index.ts`
+
+```bash
+touch index.ts
+```
+
+Copiá lo siguiente y pegalo dentro
+
+```typescript
+console.log('Congratulations, you are ready to start coding! 🎉');
+```
+
+2. Ejecutá el proyecto y disfrutalo
 
 ```bash
 pnpm start
 ```
 
-> Compila el proyecto y corre el archivo `dist/index.js`
+> Compila el proyecto y ejecuta el archivo `dist/index.js`
 
 ---
 
