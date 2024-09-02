@@ -276,6 +276,10 @@ pnpm start
 
 ---
 
+## TO DO
+
+-   [ ] Guide for fork the project
+
 Made with :open_hands: by [Rapax](https://rapax.dev)
 
 Tips are welcome through Lightning Zap to :zap:**rapax@lawallet.ar**.
