@@ -1,5 +1,13 @@
 {
-    "name": "node_project",
+    "name": "simple_node_typescript_project",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rapax00/getting-started-node-typescript"
+    },
+    "keywords": [],
+    "author": "Rapax",
+    "license": "MIT",
+    "homepage": "https://github.com/rapax00/getting-started-node-typescript#readme",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -11,9 +19,6 @@
         "check": "prettier . --check",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
     "devDependencies": {
         "@eslint/js": "^9.9.1",
         "eslint": "^9.9.1",
