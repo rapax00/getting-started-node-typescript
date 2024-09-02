@@ -122,7 +122,9 @@ Copy the following and paste it into `tsconfig.json`.
 pnpm i
 ```
 
-7. Configure eslint
+7. Configure ESLint
+
+Create a configuration file
 
 ```bash
 pnpm eslint --init
@@ -161,7 +163,9 @@ export default [
 ];
 ```
 
-8. Configure prettier
+8. Configure Prettier
+
+Create a configuration file
 
 ```bash
 touch .prettierrc
