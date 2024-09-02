@@ -36,20 +36,26 @@ Copiar lo siguiente y pegarlo en `package.json`.
 
 ```json
 {
-    "name": "node_project",
+    "name": "getting-started-node-typescript",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rapax00/getting-started-node-typescript"
+    },
+    "keywords": [],
+    "author": "Rapax",
+    "license": "MIT",
+    "homepage": "https://github.com/rapax00/getting-started-node-typescript#readme",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "start": "tsc && node dist/index.js",
         "lint": "eslint .",
-        "format": "pnpm exec prettier . --write",
+        "format": "exec prettier . --write",
         "format-spec": "prettier --write",
+        "check": "prettier . --check",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
     "devDependencies": {
         "@eslint/js": "^9.9.1",
         "eslint": "^9.9.1",
