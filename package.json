@@ -1,29 +1,25 @@
 {
-  "name": "node_project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "tsc && node dist/index.js",
-    "lint": "eslint .",
-    "format": "exec prettier . --write",
-    "format-spec": "prettier --write",
-    "check": "prettier . --check",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.9.1",
-    "@types/express": "4.17.1",
-    "eslint": "^9.9.1",
-    "globals": "^15.9.0",
-    "prettier": "3.3.3",
-    "typescript": "^5.5.4",
-    "typescript-eslint": "^8.3.0"
-  },
-  "dependencies": {
-    "express": "4.17.1"
-  }
+    "name": "node_project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc && node dist/index.js",
+        "lint": "eslint .",
+        "format": "exec prettier . --write",
+        "format-spec": "prettier --write",
+        "check": "prettier . --check",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^9.9.1",
+        "eslint": "^9.9.1",
+        "globals": "^15.9.0",
+        "prettier": "3.3.3",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.3.0"
+    }
 }
