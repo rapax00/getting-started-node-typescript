@@ -284,11 +284,11 @@ pnpm start
 
 > Compiles the project and runs the file `dist/index.js`
 
----
-
 ## To Do
 
 -   [ ] Guide for fork the project
+
+---
 
 Made with :open_hands: by [Rapax](https://rapax.dev)
 
