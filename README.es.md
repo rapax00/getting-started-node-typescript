@@ -1,21 +1,21 @@
 # Guia simple para inciar un proyecto con Node.js y TypeScript
 
+## Indice
+
+-   [Configuración](#configuración)
+-   [Características](#características)
+-   [Uso](#uso)
+    -   [ESlint](#eslint)
+    -   [Prettier](#prettier)
+    -   [Correr el proyecto](#correr-el-proyecto)
+-   [Ejemplo](#ejemplo)
+
 ## Características
 
 -   [pnpm](https://pnpm.io/) para manejar las dependencias
 -   [TypeScript](https://typescriptlang.org/)
 -   [ESlint](https://eslint.org/) para errores de sintaxis
 -   [Prettier](https://prettier.io/) para formatear el código
-
-## Indice
-
--   [Instalación](#instalación)
--   [Configuración](#configuración)
--   [Uso](#uso)
-    -   [ESlint](#eslint)
-    -   [Prettier](#prettier)
-    -   [Correr el proyecto](#correr-el-proyecto)
--   [Ejemplo](#ejemplo)
 
 ## Configuración
 

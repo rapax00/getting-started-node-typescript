@@ -2,23 +2,23 @@
 
 > Guide available in [Spanish](README.es.md)
 
-## Features
-
--   [pnpm](https://pnpm.io/) to manage dependencies
--   [TypeScript](https://typescriptlang.org/)
--   [ESlint](https://eslint.org/) for syntax errors
--   [Prettier](https://prettier.io/) to format the code
-
 ## Table of Contents
 
--   [Installation](#installation)
 -   [Configuration](#configuration)
+-   [Features](#features)
 -   [Usage](#usage)
     -   [ESlint](#eslint)
     -   [Prettier](#prettier)
     -   [Run the project](#run-the-project)
 -   [Example](#example)
 -   [To Do](#to-do) (only in this readme)
+
+## Features
+
+-   [pnpm](https://pnpm.io/) to manage dependencies
+-   [TypeScript](https://typescriptlang.org/)
+-   [ESlint](https://eslint.org/) for syntax errors
+-   [Prettier](https://prettier.io/) to format the code
 
 ## Configuration
 
