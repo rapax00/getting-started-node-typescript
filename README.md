@@ -1,9 +1,8 @@
 # Simple Guide to Start a Project with Node.js and TypeScript
 
-![Latest Release](https://badgen.net/github/release/{{owner}}/{{repo}}/stable/?color=blue&icon=bitcoin-lightning)
-![License](https://badgen.net/github/license/{{owner}}/{{repo}}/?color=cyan)
-![Stars](https://badgen.net/github/stars/{{owner}}/{{repo}}/?color=yellow)
-![Forks](https://badgen.net/github/forks/{{owner}}/{{repo}}/?color=grey)
+![License](https://badgen.net/github/license/rapax00/getting-started-node-typescript/?color=cyan)
+![Stars](https://badgen.net/github/stars/rapax00/getting-started-node-typescript/?color=yellow)
+![Forks](https://badgen.net/github/forks/rapax00/getting-started-node-typescript/?color=grey)
 
 > Guide available in [Spanish](README.es.md)
 
