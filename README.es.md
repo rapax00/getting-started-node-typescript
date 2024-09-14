@@ -1,5 +1,10 @@
 # Guia simple para inciar un proyecto con Node.js y TypeScript
 
+<!-- ![Latest Release](https://badgen.net/github/release/rapax00/getting-started-node-typescript/stable/?color=blue&icon=bitcoin-lightning) -->
+![License](https://badgen.net/github/license/rapax00/getting-started-node-typescript/?color=cyan)
+![Stars](https://badgen.net/github/stars/rapax00/getting-started-node-typescript/?color=yellow)
+![Forks](https://badgen.net/github/forks/rapax00/getting-started-node-typescript/?color=grey)
+
 ## Indice
 
 -   [Configuración](#configuración)
